@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  django:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+      - mongo
+    environment:
+      - DEBUG=1
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: '123'
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+   
+  
+  mongo:
+    image: mongo:6
+    ports:
+       - "27017:27017"
+    volumes:
+       - mongo_data:/data/db
+
+volumes:
+  postgres_data:
+  mongo_data:

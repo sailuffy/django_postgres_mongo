@@ -1,0 +1,29 @@
+docker-compose up  (to start the services)
+docker-compose down  (to stop services and removes the volumes  )
+docker-compose start  (just start service like resume it won'ty rebuild)
+docker-compose stop (just stop the containers)
+
+
+docker exec -it containername bash  (to access to container through terminal)
+
+docker postgres commands
+------------------------
+1. psql -u username -d dbname  (to access the db)
+2. \dt (list the table)
+3. \!clear (clear the terminal)
+4. \q   (exit)
+5. \d tablename  (view table)
+
+
+docker mongo commands
+-----------------------
+1. mongosh  (access mongodb shell)
+2. show dbs  (list dbs)
+3. use dbname
+4. show collections  (list tables)
+5. db.tablename.find().pretty()  (to list the all data from table )
+6. db.collection.drop()   (to delete the table)
+7. db.collection.insertOne({name: "example", age: 25});   (add record)
+8.db.collection.updateOne({name: "example"}, {$set: {age: 26}});   (update record)
+
+ 
