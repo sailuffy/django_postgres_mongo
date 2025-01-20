@@ -138,5 +138,4 @@ connect(
     port=27017
 )
 
-git config --global user.name "sai lokesh"
-git config --global user.email "saijames23@gmail.com"
+
