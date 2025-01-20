@@ -125,11 +125,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field.
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+#connecting mongo db with django project
 from mongoengine import connect
 
 connect(
@@ -137,3 +137,6 @@ connect(
     host="mongo",
     port=27017
 )
+
+git config --global user.name "sai lokesh"
+git config --global user.email "saijames23@gmail.com"
