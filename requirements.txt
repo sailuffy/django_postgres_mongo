@@ -2,3 +2,4 @@ django
 psycopg2-binary
 mongoengine
 djangorestframework
+djangorestframework-simplejwt
